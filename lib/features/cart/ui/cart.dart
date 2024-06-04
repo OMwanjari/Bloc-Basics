@@ -23,6 +23,7 @@ class _CartState extends State<Cart> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Cart"),
+        backgroundColor: Colors.teal.shade300,
       ),
       body: BlocConsumer<CartBloc, CartState>(
         bloc: cartBloc,

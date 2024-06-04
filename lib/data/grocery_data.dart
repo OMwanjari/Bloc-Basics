@@ -14,7 +14,7 @@ class Grocery {
       'price': 1.99,
       'description': 'Dairy',
       'imageUrl':
-          'https://www.heritagefoods.in/blog/wp-content/uploads/2020/12/shutterstock_539045662.jpg',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBLw8pHDmM2BH0OlzTNjOQL15dqcQO8n6Ypg&s'
     },
     {
       'id': '3',
