@@ -15,13 +15,14 @@ class CartBloc extends Bloc<CartEvent, CartState> {
 
   FutureOr<void> cartInitialEvent(
       CartInitialEvent event, Emitter<CartState> emit) {
-    emit(CartSuccessState(cartItems: cartItems));
+    emit(CartSuccessState(cartItems: List<ProductDataModel>.from(cartItems)));
   }
 
   FutureOr<void> cartRemoveFromCartEvent(
       CartRemoveFromCartEvent event, Emitter<CartState> emit) {
-    cartItems.remove(event.productDataModel);
-    emit(CartSuccessState(cartItems: cartItems));
+    final updatedCartItems = List<ProductDataModel>.from(cartItems);
+    updatedCartItems.remove(event.productDataModel);
+    emit(CartSuccessState(cartItems: updatedCartItems));
     emit(CartButtonClickedState());
   }
 }
